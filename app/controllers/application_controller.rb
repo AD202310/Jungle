@@ -3,8 +3,21 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   
   protect_from_forgery with: :exception
+  before_action :authenticate_admin, if: :in_admin_namespace?
+  
 
   private
+
+  def authenticate_admin
+    authenticate_or_request_with_http_basic do |username, password|
+      username == ENV["HTTP_BASIC_USER"] && password == ENV["HTTP_BASIC_PASSWORD"]
+    end
+  end
+
+  def in_admin_namespace?
+    controller_path.start_with?("admin/")
+  end
+  helper_method :in_admin_namespace?  # Make the helper method available to views
 
   def cart
     @cart ||= cookies[:cart].present? ? JSON.parse(cookies[:cart]) : {}
