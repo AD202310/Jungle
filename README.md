@@ -29,3 +29,9 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Bootstrap 5
 - PostgreSQL 9.x
 - Stripe
+
+## Screenshots
+![Screenshot-1](https://github.com/AD202310/Jungle/blob/master/Screenshot-1.png?raw=true)
+![Screenshot-1](https://github.com/AD202310/Jungle/blob/master/Screenshot-2.png?raw=true)
+![Screenshot-1](https://github.com/AD202310/Jungle/blob/master/Screenshot-3.png?raw=true)
+![Screenshot-1](https://github.com/AD202310/Jungle/blob/master/Screenshot-4.png?raw=true)
